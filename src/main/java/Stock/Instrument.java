@@ -9,7 +9,6 @@ public class Instrument extends Stock {
 
     public Instrument(double rrp, double buyIn, String make, String model, String description) {
         super(rrp, buyIn);
-        this.description = description;
         this.make = make;
         this.model = model;
         this.description = description;
