@@ -2,7 +2,7 @@ package Stock;
 
 public class Instrument extends Stock {
 
-    private Instrument instrument;
+
     private String make;
     private String model;
     private String description;
@@ -16,8 +16,8 @@ public class Instrument extends Stock {
 
     }
 
-    public Instrument getInstrument() {
-        return instrument;
+    public String getDescription() {
+        return description;
     }
 
     public String getMake() {

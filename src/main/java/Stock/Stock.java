@@ -1,6 +1,6 @@
 package Stock;
 
-public class Stock {
+public abstract class Stock{
 
     private double rrp;
     private double buyIn;
