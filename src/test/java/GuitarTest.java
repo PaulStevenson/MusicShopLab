@@ -2,6 +2,7 @@ import Stock.Guitar;
 import org.junit.Before;
 import org.junit.Test;
 
+import static Enums.InstrumentType.STRING;
 import static org.junit.Assert.assertEquals;
 
 public class GuitarTest {
@@ -10,7 +11,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar(300.00, 150.00, "Fender", "Strat", "Five Stars");
+        guitar = new Guitar(300.00, 150.00, STRING,"Fender", "Strat", "Five Stars");
     }
 
     @Test
