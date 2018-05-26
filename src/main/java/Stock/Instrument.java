@@ -1,8 +1,9 @@
 package Stock;
 
 import Enums.InstrumentType;
+import Interfaces.IPlay;
 
-public abstract class Instrument extends Stock{
+public abstract class Instrument extends Stock implements IPlay{
 
 
     private Enum instrumentType;
@@ -29,5 +30,9 @@ public abstract class Instrument extends Stock{
 
     public String getModel() {
         return model;
+    }
+
+    public Enum getInstrumentType() {
+        return instrumentType;
     }
 }

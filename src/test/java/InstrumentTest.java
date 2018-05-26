@@ -18,6 +18,11 @@ public class InstrumentTest {
         instrument = new Guitar(300, 150, STRING, "Fender", "Model", "Five Stars", GuitarType.ELECTRIC);
     }
 
+    @Test
+    public void hasInstrumentType(){
+        assertEquals(STRING, instrument.getInstrumentType());
+    }
+
 
 
 

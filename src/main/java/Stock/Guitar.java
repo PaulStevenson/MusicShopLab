@@ -22,4 +22,9 @@ public class Guitar extends Instrument{
     public int getNumberOfStrings() {
         return ACOUSTIC.getNumberOfStrings();
     }
+
+    @Override
+    public String instrumentGoes() {
+        return "Plink Plonk";
+    }
 }

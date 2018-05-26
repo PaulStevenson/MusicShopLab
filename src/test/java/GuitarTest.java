@@ -46,6 +46,11 @@ public class GuitarTest {
         assertEquals(6, guitar.getNumberOfStrings());
     }
 
+    @Test
+    public void instrumentMakesNoise(){
+        assertEquals("Plink Plonk", guitar.instrumentGoes());
+    }
+
 
 
 

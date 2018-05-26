@@ -7,7 +7,6 @@ import org.junit.Test;
 
 import static Enums.InstrumentType.STRING;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 public class StockTest {
 
