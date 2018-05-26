@@ -1,4 +1,5 @@
 import Enums.GuitarType;
+import Stock.Accessory;
 import Stock.Guitar;
 import Stock.Instrument;
 import Stock.Stock;
@@ -16,6 +17,8 @@ public class StockTest {
     @Before
     public void before(){
         item = new Guitar(300.00, 150.00, STRING, "Fender", "Strat", "Five Stars", GuitarType.ELECTRIC);
+        item = new Accessory("Pick", 3.00, 0.75);
+
     }
 
     @Test
@@ -31,6 +34,11 @@ public class StockTest {
     @Test
     public void canCalculateMarkUp(){
         assertEquals(150.00, item.calulateMarkUp(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkUpOfAccessory(){
+        assertEquals(2.25, item.calulateMarkUp(), 0.01);
     }
 
 }
