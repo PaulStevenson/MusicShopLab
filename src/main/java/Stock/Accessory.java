@@ -2,7 +2,7 @@ package Stock;
 
 import Stock.Stock;
 
-public class Accessory extends Stock {
+public abstract class Accessory extends Stock {
 
 
     private String name;
