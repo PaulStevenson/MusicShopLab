@@ -1,3 +1,4 @@
+import Enums.AccessoryType;
 import Enums.GuitarType;
 import Stock.Accessory;
 import Stock.Guitar;
@@ -11,34 +12,35 @@ import static org.junit.Assert.assertEquals;
 
 public class StockTest {
 
-    Stock item;
+    Stock instrument;
+    Stock accessory;
 
 
     @Before
     public void before(){
-        item = new Guitar(300.00, 150.00, STRING, "Fender", "Strat", "Five Stars", GuitarType.ELECTRIC);
-        item = new Accessory("Pick", 3.00, 0.75);
+        instrument = new Guitar(300.00, 150.00, STRING, "Fender", "Strat", "Five Stars", GuitarType.ELECTRIC);
+        accessory = new Accessory("Pick", AccessoryType.ACCESSORIES,3.00, 0.75);
 
     }
 
     @Test
     public void canGetRrp(){
-        assertEquals(300.00, item.getRrp(), 0.01);
+        assertEquals(300.00, instrument.getRrp(), 0.01);
     }
 
     @Test
     public void canGetBuyIn(){
-        assertEquals(150.00, item.getBuyIn(), 0.01);
+        assertEquals(150.00, instrument.getBuyIn(), 0.01);
     }
 
     @Test
     public void canCalculateMarkUp(){
-        assertEquals(150.00, item.calulateMarkUp(), 0.01);
+        assertEquals(150.00, instrument.calulateMarkUp(), 0.01);
     }
 
     @Test
     public void canCalculateMarkUpOfAccessory(){
-        assertEquals(2.25, item.calulateMarkUp(), 0.01);
+        assertEquals(2.25, accessory.calulateMarkUp(), 0.01);
     }
 
 }

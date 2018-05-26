@@ -3,18 +3,19 @@ package Enums;
 public enum AccessoryType {
 
     PARTS("Replacement Parts"),
-    ACCESSORIES("Accessories"),
+    ACCESSORIES("Accessory"),
     SHEETMUSIC("Sheet Music"),
     CASES("Instrument Cases");
 
-    protected String itemName;
 
-    AccessoryType(String itemName){
-        this.itemName = itemName;
+    protected String accessoryCategory;
+
+    AccessoryType(String accessoryCategory){
+        this.accessoryCategory = accessoryCategory;
     }
 
-    public String hasItemName(){
-        return this.itemName;
+    public String hasAccessoryCategory(){
+        return this.accessoryCategory;
     }
 
 
