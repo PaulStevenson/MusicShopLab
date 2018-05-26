@@ -1,7 +1,9 @@
 import Stock.Guitar;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.theories.suppliers.TestedOn;
 
+import static Enums.GuitarType.ELECTRIC;
 import static Enums.InstrumentType.STRING;
 import static org.junit.Assert.assertEquals;
 
@@ -11,7 +13,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar(300.00, 150.00, STRING,"Fender", "Strat", "Five Stars");
+        guitar = new Guitar(300.00, 150.00, STRING,"Fender", "Strat", "Five Stars", ELECTRIC);
     }
 
     @Test
@@ -38,6 +40,13 @@ public class GuitarTest {
     public void getDescription(){
         assertEquals("Five Stars", guitar.getDescription());
     }
+
+    @Test
+    public void getNumberofStrings(){
+        assertEquals(6, guitar.getNumberOfStrings());
+    }
+
+
 
 
 }

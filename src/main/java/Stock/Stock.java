@@ -1,6 +1,8 @@
 package Stock;
 
-public abstract class Stock{
+import Interfaces.ISell;
+
+public abstract class Stock implements ISell{
 
     private double rrp;
     private double buyIn;
@@ -18,4 +20,9 @@ public abstract class Stock{
     public double getBuyIn() {
         return buyIn;
     }
-}
+
+    public double calulateMarkUp() {
+        return this.rrp -= this.buyIn;
+    }
+
+    }
